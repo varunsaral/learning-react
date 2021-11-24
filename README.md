@@ -45,6 +45,6 @@ We have our first app
     let [value,update] = usestate(0);
 
     now for updating value , update func can be used and react will fetch the most recent state.
-
+6) Added blank page func when no task are available through ()?:
 
 that's it for now .
