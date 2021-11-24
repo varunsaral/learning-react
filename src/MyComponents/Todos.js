@@ -6,7 +6,7 @@ function Todos(props) {
             <h3 className="text-center my-3"> Todos List</h3>
             
             {props.todos.map((todo)=>{
-                return <h4>{todo.title}</h4>      
+                return <Todo todo = {todo} key={todo.sno} ondelete = {props.ondelete}/>      
             })}
            
         </div>

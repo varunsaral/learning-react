@@ -1,14 +1,17 @@
 
 import './App.css';
 import Header from './MyComponents/Header'
-import Todo from './MyComponents/Todo'
 import Todos from './MyComponents/Todos'
 import Footer from './MyComponents/Footer'
+import React, { useState } from 'react';
+
 function App() {
-  const ondelete = ()=>{
-    console.log("deleted")
+  const ondelete = (todo)=>{
+   setTodos(todos.filter((e)=>{
+        return e!==todo;
+   }))
   }
-  let todos = [{
+  let [todos,setTodos] = useState([{
     sno:1,
     title:"Go to market",
     desc:"Just go to the market"
@@ -23,13 +26,13 @@ function App() {
     title:"Pick up mom",
     desc:"she's waiting for me"
   },
-]
+])
   return (
     
     <>
     <Header name = "varun"/>
     <Todos todos={todos} ondelete = {ondelete}/>
-    <Todo/>
+    
   <Footer/>
    </>
   );
