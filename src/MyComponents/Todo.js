@@ -3,14 +3,14 @@ import React from 'react'
 function Todo({todo,ondelete}) {
     return (
         <div>
-<div class="card" >
-  <div class="card-header">
+<div className="card" >
+  <div className="card-header">
    Task
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">{todo.sno}</li>
-    <li class="list-group-item">{todo.title}</li>
-    <li class="list-group-item">{todo.desc}</li>
+  <ul className="list-group list-group-flush">
+    <li className="list-group-item">{todo.sno}</li>
+    <li className="list-group-item">{todo.title}</li>
+    <li className="list-group-item">{todo.desc}</li>
     
   </ul>
 </div>
